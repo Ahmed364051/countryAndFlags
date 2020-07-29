@@ -1,0 +1,164 @@
+/* Спецификация */
+
+* {
+	box-sizing: border-box;
+}
+
+ul, li {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #ddd;
+	padding: 0;
+	margin: 0;
+	font-family: Tahoma;
+}
+
+/* Опрос */
+
+.main {
+	display: flex;	
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.main__img {
+	width: 	300px;
+	height: 200px;
+	border: 6px dashed #fff;
+}
+
+.main__answer {
+	width: 300px;
+}
+
+.main__item {
+	background: #fff;
+	padding: 5px 0;
+	border-radius: 5px;
+	margin-bottom: 20px;
+	cursor: pointer;
+	user-select: none;
+	font-size: 25px;
+	text-align: center;
+	display: block;
+	transition: background .3s ease;
+}
+
+.main__item:hover {
+	background: #948b8b;
+}
+
+/* Результат опроса */
+
+.main__res {
+	display: none;
+}
+
+/* Смайл */
+
+.main__jowls {
+	display: none;
+	position: relative;
+}
+
+.main__jowl_left {
+	left: -5px;
+}
+
+.main__jowl_right {
+	right: -5px;
+}
+
+.main__jowl {
+	top: 150px;
+	position: absolute;
+	width: 80px;
+	height: 40px;
+	background: rgba(255, 0, 0, .2);
+	border-radius: 50%;
+}
+
+.main__smile {
+	box-shadow: 5px 0 15px rgba(255, 255, 255, .4) inset,
+				-5px 0 10px rgba(255, 255, 255, .6) inset,
+				5px 0 45px rgba(255, 255, 255, .2),
+				-5px 0 25px rgba(255, 255, 255, .2) ;
+	margin: 0 auto;
+	overflow: hidden;
+	width: 300px;
+	height: 300px;
+	background: #e8e10d;
+	border-radius: 50%;
+}
+
+.main__eyes {
+	display: flex;
+	justify-content: space-around;
+	padding-top: 80px;
+}
+
+.main__eye {
+	position: relative;
+	width: 70px;
+	height: 70px;
+	background: #fff;
+	border-radius: 50%;
+	box-shadow: 0 0 20px rgba(0, 0, 0, .2) inset;
+}
+
+.main__eye:before {
+	content: "";
+	width: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 20px;
+	box-shadow: 0 0 0 10px rgba(74, 20, 0, .7);
+	background: #000;
+	border-radius: 50%;
+	display: block;
+}
+
+.main__mouth {
+	margin: 50px auto;
+	width: 150px;
+	background: 
+	repeating-linear-gradient(transparent,transparent 50%, #ddd 52%),
+    repeating-linear-gradient(90deg,#fff, #fff 15%, #ddd 17%);
+	height: 65px;
+}
+
+/* Классы для результатов */
+
+.mouth-angry {
+	border-radius: 10px;
+}
+
+.mouth-happy {
+	border-bottom-left-radius: 65px;
+	border-bottom-right-radius: 65px;
+}
+
+.mouth-satisfied {
+	background: #821a1a;
+	box-shadow: 0 -5px 5px rgba(38, 182, 252, .5) inset;
+	border-radius: 50%;
+	height: 70px;
+	width: 70px;
+}
+
+.main__score {
+	margin-top: 45px;
+	text-align: center;
+	font-size: 45px;
+}
+
+
+
+
